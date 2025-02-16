@@ -199,8 +199,7 @@ print(f"Rental cost: ${cost:.2f}")
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/rental_system.git
-cd rental_system
+git clone https://github.com/sutharv/rental_system
 ```
 
 2. Install dependencies:
