@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Rental History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Recent Rental History</h1>
+        <div class="mb-4">
+            <a href="{{ url_for('main.index') }}" class="btn btn-primary me-2">
+                <i class="bi bi-house"></i> Home
+            </a>
+            <a href="{{ url_for('main.available_items') }}" class="btn btn-primary me-2">
+                <i class="bi bi-box"></i> Available Items
+            </a>
+            <a href="{{ url_for('main.customers') }}" class="btn btn-primary">
+                <i class="bi bi-people"></i> Customers
+            </a>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Item</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Cost</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for rental in rentals %}
+                            <tr>
+                                <td>
+                                    {{ rental.customer_name }}
+                                    <a href="{{ url_for('main.customer_history', customer_id=rental.customer_id) }}" 
+                                       class="text-info ms-2" 
+                                       title="View Customer History">
+                                        <i class="bi bi-person"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    {{ rental.item_name }}
+                                    <a href="{{ url_for('main.item_history', item_id=rental.item_id) }}" 
+                                       class="text-info ms-2" 
+                                       title="View Item History">
+                                        <i class="bi bi-box"></i>
+                                    </a>
+                                </td>
+                                <td>{{ rental.start_time.split('T')[0] }} {{ rental.start_time.split('T')[1][:8] }}</td>
+                                <td>{{ rental.end_time.split('T')[0] }} {{ rental.end_time.split('T')[1][:8] }}</td>
+                                <td>${{ "%.2f"|format(rental.cost) }}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="{{ url_for('main.customer_history', customer_id=rental.customer_id) }}" 
+                                           class="btn btn-info btn-sm">
+                                            <i class="bi bi-person"></i> Customer History
+                                        </a>
+                                        <a href="{{ url_for('main.item_history', item_id=rental.item_id) }}" 
+                                           class="btn btn-info btn-sm ms-1">
+                                            <i class="bi bi-box"></i> Item History
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

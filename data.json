@@ -1,0 +1,195 @@
+{
+    "items": {
+        "1": {
+            "id": "1",
+            "name": "Yamaha ",
+            "rental_price": 20.0,
+            "is_rented": false,
+            "rental_history": [
+                {
+                    "start_time": "2025-02-16T14:36:30.942058",
+                    "end_time": "2025-02-16T14:56:11.843622",
+                    "duration_hours": 0.3280282122222222,
+                    "cost": 6.5605642444444445
+                }
+            ],
+            "current_rental_start": null,
+            "type": "bike",
+            "bike_type": "scooter \ud83d\udef5"
+        },
+        "2": {
+            "id": "2",
+            "name": "toyota",
+            "rental_price": 100.0,
+            "is_rented": false,
+            "rental_history": [],
+            "current_rental_start": null,
+            "type": "car",
+            "brand": "Toyota civic \ud83d\ude97"
+        },
+        "3": {
+            "id": "3",
+            "name": "Audi ",
+            "rental_price": 150.0,
+            "is_rented": false,
+            "rental_history": [],
+            "current_rental_start": null,
+            "type": "car",
+            "brand": "audi v4  \ud83c\udfce\ufe0f"
+        },
+        "4": {
+            "id": "4",
+            "name": "Honda ",
+            "rental_price": 70.0,
+            "is_rented": false,
+            "rental_history": [
+                {
+                    "start_time": "2025-02-16T14:36:46.635520",
+                    "end_time": "2025-02-16T14:56:08.106045",
+                    "duration_hours": 0.3226307013888889,
+                    "cost": 22.584149097222223
+                }
+            ],
+            "current_rental_start": null,
+            "type": "bike",
+            "bike_type": "honda vision \ud83d\udef5"
+        },
+        "6": {
+            "id": "6",
+            "name": "mountain bike",
+            "rental_price": 30.0,
+            "is_rented": false,
+            "rental_history": [],
+            "current_rental_start": null,
+            "type": "bike",
+            "bike_type": "mountain bike cross \ud83d\udeb5\ud83c\udffb\u200d\u2642\ufe0f"
+        },
+        "5": {
+            "id": "5",
+            "name": "BMW ",
+            "rental_price": 250.0,
+            "is_rented": true,
+            "rental_history": [],
+            "current_rental_start": "2025-02-16T14:36:57.520178",
+            "type": "car",
+            "brand": "BMW \ud83c\udfce\ufe0f"
+        },
+        "7": {
+            "id": "7",
+            "name": "bicycle",
+            "rental_price": 5.0,
+            "is_rented": false,
+            "rental_history": [],
+            "current_rental_start": null,
+            "type": "bike",
+            "bike_type": "bicycle \ud83d\udeb2 "
+        }
+    },
+    "customers": {
+        "1.1": {
+            "id": "1.1",
+            "first_name": "Vishal",
+            "last_name": "Suthar",
+            "address": "Majdanska 3/106,",
+            "contact_number": "1233451234",
+            "active_rentals": []
+        },
+        "1,.2": {
+            "id": "1,.2",
+            "first_name": "Jakub",
+            "last_name": "Nowak",
+            "address": "centrum",
+            "contact_number": "+48 345 347 678",
+            "active_rentals": []
+        },
+        "1.3": {
+            "id": "1.3",
+            "first_name": "Magda ",
+            "last_name": "Nowak",
+            "address": "mokotow, Warsaw ",
+            "contact_number": "+48 888 666 111",
+            "active_rentals": []
+        },
+        "1.4": {
+            "id": "1.4",
+            "first_name": "jan",
+            "last_name": "kowlska",
+            "address": "ochota",
+            "contact_number": "+48 735 431 902",
+            "active_rentals": []
+        },
+        "1.5": {
+            "id": "1.5",
+            "first_name": "jay",
+            "last_name": "Patel ",
+            "address": "zoliborz",
+            "contact_number": "345347678",
+            "active_rentals": []
+        }
+    },
+    "rental_history": [
+        {
+            "customer_id": "1",
+            "customer_name": "Vishal Suthar",
+            "item_id": "1",
+            "item_name": "Yamaha ",
+            "start_time": "2025-02-16T00:18:49.408672",
+            "end_time": "2025-02-16T00:19:24.122341",
+            "cost": 200.0
+        },
+        {
+            "customer_id": "1",
+            "customer_name": "Vishal Suthar",
+            "item_id": "1",
+            "item_name": "Yamaha ",
+            "start_time": "2025-02-16T00:22:09.740822",
+            "end_time": "2025-02-16T00:24:05.196771",
+            "cost": 1.6035548472222223
+        },
+        {
+            "customer_id": "1",
+            "customer_name": "Vishal Suthar",
+            "item_id": "1",
+            "item_name": "Yamaha ",
+            "start_time": "2025-02-16T00:28:22.259289",
+            "end_time": "2025-02-16T00:28:49.464704",
+            "cost": 0.37785298611111107
+        },
+        {
+            "customer_id": "2",
+            "customer_name": "syed abdulla",
+            "item_id": "2",
+            "item_name": "A4",
+            "start_time": "2025-02-16T00:53:43.454762",
+            "end_time": "2025-02-16T00:55:27.093357",
+            "cost": 7.196548882805555
+        },
+        {
+            "customer_id": "2",
+            "customer_name": "syed abdulla",
+            "item_id": "2",
+            "item_name": "A4",
+            "start_time": "2025-02-16T13:15:58.424580",
+            "end_time": "2025-02-16T14:19:19.429033",
+            "cost": 263.9375258780389
+        },
+        {
+            "customer_id": "1.5",
+            "customer_name": "jay Patel ",
+            "item_id": "4",
+            "item_name": "Honda ",
+            "start_time": "2025-02-16T14:36:46.635520",
+            "end_time": "2025-02-16T14:56:08.106045",
+            "cost": 22.584149097222223
+        },
+        {
+            "customer_id": "1.3",
+            "customer_name": "Magda  Nowak",
+            "item_id": "1",
+            "item_name": "Yamaha ",
+            "start_time": "2025-02-16T14:36:30.942058",
+            "end_time": "2025-02-16T14:56:11.843622",
+            "cost": 6.5605642444444445
+        }
+    ]
+}
